@@ -2,9 +2,11 @@
   "name": "expo-auth-api",
   "version": "1.0.0",
   "description": "An api to hash and compare password",
-  "main": "index.js",
+  "main": "/src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx tsc",
+    "start": "node dist/app.js",
+    "dev": "nodemon src/app.ts"
   },
   "keywords": [
     "expo-auth",
@@ -13,10 +15,20 @@
   "author": "thecodingmontana",
   "license": "MIT",
   "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
+    "@types/morgan": "^1.9.9",
     "@types/node": "^22.5.0",
     "express": "^4.19.2",
+    "nodemon": "^3.1.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "morgan": "^1.10.0"
   }
 }
